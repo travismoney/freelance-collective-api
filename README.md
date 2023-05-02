@@ -47,7 +47,7 @@ First install the dependencies/requirements with:
 
    git clone -b master https://github.com/travismoney/freelance-collective-api.git
 
-   cd project
+   cd into the project's folder
 
 2. Build the docker image:
 
