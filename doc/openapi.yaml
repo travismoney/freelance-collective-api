@@ -1,0 +1,161 @@
+openapi: 3.0.0
+info:
+  title: Freelance Collective API
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /api/v1/user:
+    post:
+      tags:
+        - Users
+      summary: Insert User
+      description: Added a new user to collection
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: travismoney
+                email: travismoney.tm@gmail.com
+                phoneNumber: '01455667788'
+                location: Kuala Lumpur
+                skillsets:
+                  - Web Dev
+                  - UI/UX Design
+                hobbies:
+                  - Creating digital art or graphics
+                linkedInUrl: www.linkedin.com/in/travismoney
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                isSuccess: true
+                message: User added to collection!
+  /api/v1/users:
+    get:
+      tags:
+        - Users
+      summary: Get All Users
+      description: Get all users from collection
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - skillsets:
+                    - Web Dev
+                    - UI/UX Design
+                  hobbies:
+                    - Creating digital art or graphics
+                  _id: 644da0f82fac6e55945f1123
+                  username: travismoney
+                  email: travismoney.tm@gmail.com
+                  phoneNumber: '60128486654'
+                  location: Kuala Lumpur
+                  linkedInUrl: www.linkedin/in/travismoney
+                  __v: 0
+                - skillsets:
+                    - Web Dev
+                    - Mobile App Dev
+                  hobbies:
+                    - Experimenting with new technologies
+                  _id: 644f7c2b2fac6e55945f114f
+                  username: sunnycactus
+                  email: sunnycactus@gmail.com
+                  phoneNumber: '60123870153'
+                  location: Kuala Lumpur
+                  linkedInUrl: www.linkedin.com/in/johnnybravo
+                  __v: 0
+                - skillsets:
+                    - Web Dev
+                    - Mobile App Dev
+                  hobbies:
+                    - Contributing to open source
+                    - Attending hackathons
+                  _id: 644f7f542fac6e55945f1167
+                  username: jamesmac
+                  email: james@gmail.com
+                  phoneNumber: '60107966639'
+                  location: Johor
+                  linkedInUrl: www.linkedin.com/jamesma
+                  __v: 0
+  /api/v1/user/:id:
+    get:
+      tags:
+        - Users
+      summary: Get User
+      description: Get a single user by ID
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                skillsets:
+                  - Web Dev
+                  - UI/UX Design
+                hobbies:
+                  - Creating digital art or graphics
+                _id: 644da0f82fac6e55945f1123
+                username: travismoney
+                email: travismoney.tm@gmail.com
+                phoneNumber: '60128486654'
+                location: Kuala Lumpur
+                linkedInUrl: www.linkedin/in/travismoney
+                __v: 0
+    put:
+      tags:
+        - Users
+      summary: Update User
+      description: Update User by ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                skillsets:
+                  - Web Dev
+                  - UI/UX Design
+                hobbies:
+                  - Creating digital art or graphics
+                username: travismoney
+                email: travismoney.tm@gmail.com
+                phoneNumber: '60128486654'
+                location: Selangor
+                linkedInUrl: www.linkedin/in/travismoney
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                isSuccess: true
+                message: User updated successfully
+    delete:
+      tags:
+        - Users
+      summary: Delete User
+      description: Delete user by ID
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: User deleted successfully
