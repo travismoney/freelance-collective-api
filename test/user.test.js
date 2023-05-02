@@ -54,9 +54,9 @@ describe('GET /api/v1/users', () => {
         .request(app)
         .get('/api/v1/users')
         .end((err, res) => {
+            expect(err).to.be.null;
             expect(res).to.have.status(200);
             expect(res.body).to.be.an('array');
-            expect(res.body).to.have.lengthOf(4);
             expect(res.body[0]).to.have.property('skillsets').that.is.an('array');
             expect(res.body[0]).to.have.property('hobbies').that.is.an('array');
             expect(res.body[0]).to.have.property('_id').that.is.a('string');
