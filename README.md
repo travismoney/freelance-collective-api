@@ -32,12 +32,14 @@ vercel.json
 First install the dependencies/requirements with:
 ```
 1. Ensure to have node.js, npm and installed.
+
 2. Install all the required dependencies by running `npm install`
 ```
 
 ## Developing and debugging locally
 ```
 1. Create a .env in the root directory. Add PORT = 3000 and DB_URL_MONGODB = 'YOUR MONGO DB URL' inside it.
+
 2. To start the Express server locally, run the command npm run dev. This will start the server on your local machine. You can access the APIs at http://localhost:3000/
 ```
 
@@ -82,4 +84,15 @@ APIs are deployed to Vercel. Here's the link: https://freelance-collective-api.v
 To view the swagger documentation, uncomment out the codes on line 9 and 10 from index.js and run the server locally. 
 
 You are able to view the swagger doc at http://localhost:3000/api-docs/
+```
+
+## Unit Testing
+```
+For unit testing, run the command `npm run test` 
+
+This will run 3 test as per below:
+
+1. Test for MongoDB Connection
+2. Test for endpoint GET /api/v1/user/:id 
+3. Test for endpoint GET /api/v1/users
 ```
