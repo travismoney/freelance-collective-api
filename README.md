@@ -16,6 +16,8 @@ src/
 └── index.html
 └── main.ts
 └── styles.scss
+test/
+└── user.test.js
 .gitignore
 app.js
 config.js
