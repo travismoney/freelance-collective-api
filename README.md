@@ -45,7 +45,7 @@ First install the dependencies/requirements with:
 ```
 1. Clone the project repo:
 
-   git clone https://github.com/your_username/project.git
+   git clone -b master https://github.com/travismoney/freelance-collective-api.git
 
    cd project
 
