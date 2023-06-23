@@ -1,6 +1,6 @@
 # Freelancer Collective API
 
-RESTful APIs for Freelancers Collective Web (ETIQA IT Interview Assessment)
+RESTful APIs for Freelancers Collective Web
 
 # Folder & File Structure
 
